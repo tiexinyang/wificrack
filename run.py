@@ -79,5 +79,5 @@ class hacker():
 
 if __name__ == '__main__':
     ssidkw = input("Target SSID KEYWORD(Leave it empty to ATTACK all):\t")
-    skipkw = input("Ignored SSID KEYWORD(Leave it enpty to ATTACK all):\t")
+    skipkw = input("Ignored SSID KEYWORD(Leave it empty to ATTACK all):\t")
     hacker().go(ssidkw=ssidkw,skipkw=skipkw)
