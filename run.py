@@ -78,6 +78,6 @@ class hacker():
         return 0
 
 if __name__ == '__main__':
-    ssidkw = input("Please input your target SSID KEYWORD(Leave it empty to ATTACK all):\t")
-    skip = input("To be ignored SSID KEYWORD(Can be part of your own WIFI name):\t")
+    ssidkw = input("Target SSID KEYWORD(Leave it empty to ATTACK all):\t")
+    skip = input("Ignored SSID KEYWORD(Leave it enpty to ATTACK all):\t")
     hacker().go(ssidkw=ssidkw,skip=skip)
